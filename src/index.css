@@ -1,27 +1,175 @@
+/* Shared */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  text-align: left;
-  padding: 5%;
-  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  font-family: sans-serif;
 }
 
-button {
-  margin-left: 5px;
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3px;
+  padding-bottom: 50px;
 }
 
-button, input {
-  border: 2px solid black;
-  border-radius: 2px;
-  background-color: white;
+@media (min-width: 769px) {
+  .container {
+    margin: 1.5rem auto;
+  }
+}
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+}
+
+.result_title {
+  text-align: center;
+  padding-top: 50px  ;
+}
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*Progress bar */
+.progress {
+padding-top:100px;
+margin : 0 auto;
+text-align: center;
+}
+
+progress {
+  border: 0;
+  height: 25px;
+  border-radius: 20px;
+  width:50%;
+}
+progress::-webkit-progress-bar {
+  border: 0;
+  height: 25px;
+  border-radius: 20px;
+}
+progress::-webkit-progress-value {
+  border: 0;
+  height: 25px;
+  border-radius: 20px;
+}
+progress::-moz-progress-bar {
+  border: 0;
+  height: 25px;
+  border-radius: 20px;
+}
+
+/* QuestionCount Component */
+.questionCount {
+ 
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+}
+
+/* Question Component */
+.question {
+  clear: both;
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #eefbfe;
+}
+
+.radioCustomButton {
+    position: absolute;
+    width: auto;
+    opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radioCustomLabel {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 2.5rem 1.5rem 5rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 28px;
+    height: 28px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radioCustomButton:checked ~ .radioCustomLabel:before {
+    content: '';
+    background: rgb(63, 137, 197) url(/svg/icon-check.svg) no-repeat;
+    background-size: 27px;
+    border-color:  rgb(63, 137, 197);
+}
+
+.submit {
+  background-color: rgb(63, 137, 197); /* Green */
+    border: 1px solid rgb(63, 137, 197);
+    border-radius: 6px;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.back {
+  background-color: rgb(33, 33, 34); /* Green */
+    border: 1px solid rgb(33, 33, 34);
+    border-radius: 6px;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
 }
 
 ol li{
   list-style-type: none;
 }
 
-.summary {
-  float:left;
-  padding: 0 5px;
-}
 
 .error {
   color: red;

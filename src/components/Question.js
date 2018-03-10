@@ -13,21 +13,25 @@ const Question = ({
   return (
    
     <div>
-      <h3>{question.question}</h3>
+      <h2 className="question">{question.question}</h2>
       <ol>
       {question.answers.map((answer, i) =>
-        <li key={`${step}-${i}`}>
+        <li key={`${step}-${i}`} className="answerOption">
           <input type="radio" name={`question_${step}`} id={`question_${step}_answer_${i}`}
-           defaultChecked={i == Useranswers ? true : false} value={i} onChange={onAnswerSelected} />
+          className='radioCustomButton'
+          defaultChecked={i == Useranswers ?
+          true : false} value={i} onChange={onAnswerSelected} />
           {' '}
-          <label htmlFor={`question_${step}_answer_${i}`}>{answer.label}</label>
+          <label  className="radioCustomLabel" htmlFor={`question_${step}_answer_${i}`}>{answer.label}</label>
         </li>
       )}
       </ol>
-      
-      {step > 0 && <button onClick={back}>Back</button>}
-      <button onClick={onSubmit}>Submit</button>
+      <div style={{textAlign:'center'}}>
+      {step > 0 && <button className='back' onClick={back}>Back</button>}
+      <button className='submit' onClick={onSubmit}>Submit</button>
       <p className='error'>{error}</p>
+      </div>
+ 
     </div>
   )
 }

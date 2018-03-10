@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import Question from './Question'
 
-
 export default class Survey extends React.Component {
 
     constructor(props) {
@@ -22,16 +21,14 @@ export default class Survey extends React.Component {
 
     handleSubmit() {
         if (this.state.Useranswers[this.state.step] != null) {
-            this.setState({error : ''});
+            this.setState({ error: '' });
             this.state.step < this.state.survey.data.questions.length ?
                 this.setState({ 'step': this.state.step + 1 }) : ''
-        }else {
-            this.setState({error : 'Please select one'})
+        } else {
+            this.setState({ error: 'Please select one' })
         }
 
     }
-
-
 
     handleBack() {
         this.state.step > 0 ?
@@ -40,7 +37,7 @@ export default class Survey extends React.Component {
 
 
     handleAnswerSelected(event) {
-        this.setState({error : ''});
+        this.setState({ error: '' });
         let list = [...this.state.Useranswers.slice(0, this.state.step),
         parseInt(event.target.value),
         ...this.state.Useranswers.slice(this.state.step + 1)];
@@ -50,24 +47,25 @@ export default class Survey extends React.Component {
     summaryCreator() {
         return this.state.Useranswers.map((answer, i) => {
             return (
-                <div key={i + 'r'}>
-                    <div key={i + 'q'} className="summary">{`${this.state.survey.data.questions[i].question} :`}</div>
-                    <div key={i + 'l'} className="summary">
-                        {this.state.survey.data.questions[i].answers[answer].label}
+                <div key={i + 'r'} className="container result">
+                    <div key={i + 'q'} >
+                        {`${this.state.survey.data.questions[i].question} :
+                     ${this.state.survey.data.questions[i].answers[answer].label} `}
                     </div>
+
                     <br />
                 </div>
+
             )
         });
     }
 
     render() {
 
-        const { survey, step, Useranswers,error } = this.state;
+        const { survey, step, Useranswers, error } = this.state;
         const numberOfQuestions = survey.data ? survey.data.questions.length : 0;
 
         let completed = (survey.data && (step === survey.data.questions.length)) ? true : false;
-        let summary;
 
         localStorage.question = survey.data ? survey.data.questions[step] : '';
         localStorage.Useranswers = Useranswers[step];
@@ -75,24 +73,32 @@ export default class Survey extends React.Component {
 
 
         return (
-            <div>
+            <div className="container">
                 {console.log('local', localStorage.step)}
 
-                <h1>{survey.title}</h1>
+                <h2>{survey.title}</h2>
                 {completed ?
-
-                    <div>
+                    <div className='container'>
                         {/* Summary Page */}
-                        <p>Congratulation, you finished the survey</p>
-                        Summary : <br />
-                        {this.summaryCreator()}
+                        <h1 className='result_title'>Congratulation, you finished the survey</h1>
+
                         <br />
-                        <button onClick={() => window.location.reload()}>Reload Survey</button>
+                        {this.summaryCreator()}
+                        <div style={{ textAlign: 'center' }}>
+                            <button className='submit' onClick={() => this.setState({ step: 0, Useranswers: [] })}>
+                                Reload Survey
+                            </button>
+                        </div>
                     </div>
                     :
                     <div>
                         {/* Progress bar */}
-                        <h2>Question {step + 1} of {numberOfQuestions}</h2>
+                        <div className='progress'>
+                            <progress value={step} max={survey.data ? survey.data.questions.length : 0}></progress>
+                        </div>
+                        <div className="questionCount">Question {step + 1} of {numberOfQuestions}</div>
+
+                        <br />
                         {survey.data && step < numberOfQuestions ?
                             <Question
                                 question={survey.data.questions[step]}
@@ -101,10 +107,9 @@ export default class Survey extends React.Component {
                                 onAnswerSelected={(event) => this.handleAnswerSelected(event)}
                                 onSubmit={() => this.handleSubmit()}
                                 back={() => this.handleBack()}
-                                error = {error}
+                                error={error}
                             />
-
-                            : 'completed'}
+                            : ''}
                     </div>
                 }
             </div>
