@@ -13,3 +13,7 @@ button, input {
   border-radius: 2px;
   background-color: white;
 }
+
+ol li{
+  list-style-type: none;
+}

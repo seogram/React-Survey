@@ -9,8 +9,8 @@ export default class Survey extends React.Component {
         super(props)
         this.state = {
             survey: {},
-            index: 0,
-            answers: []
+            step: 0,
+            Useranswers: []
         }
     }
 
@@ -21,21 +21,30 @@ export default class Survey extends React.Component {
 
 
     handleSubmit() {
-        this.state.index < this.state.survey.data.questions.length ?
-            this.setState({ 'index': this.state.index + 1 }) : ''
+        
+        this.state.step < this.state.survey.data.questions.length ?
+            this.setState({ 'step': this.state.step + 1 }) : ''
     }
 
-    handleAnswerSelected(event) {
-        let list = [...this.state.answers.slice(0, this.state.index),
-        parseInt(event.target.value),
-        ...this.state.answers.slice(this.state.index + 1)];
+    
 
-        this.setState({ 'answers': list })
+    handleBack() {
+        this.state.step > 0 ?
+            this.setState({ 'step': this.state.step - 1 }) : ''
+    }
+
+
+    handleAnswerSelected(event) {
+        let list = [...this.state.Useranswers.slice(0, this.state.step),
+        parseInt(event.target.value),
+        ...this.state.Useranswers.slice(this.state.step + 1)];
+
+        this.setState({ 'Useranswers': list })
     }
 
     summaryCreator() {
 
-        return this.state.answers.map((answer, i) => {
+        return this.state.Useranswers.map((answer, i) => {
             return <li key={i}>
                 {this.state.survey.data.questions[i].answers[answer].label}
             </li>
@@ -44,10 +53,10 @@ export default class Survey extends React.Component {
 
     render() {
 
-        const { survey, index, answers } = this.state;
+        const { survey, step, Useranswers } = this.state;
         const numberOfQuestions = survey.data ? survey.data.questions.length : 0;
 
-        let completed = (survey.data && (index === survey.data.questions.length)) ? true : false;
+        let completed = (survey.data && (step === survey.data.questions.length)) ? true : false;
         let summary;
 
         return (
@@ -63,13 +72,15 @@ export default class Survey extends React.Component {
                     :
                     <div>
                         {/* Progress bar */}
-                        <h2>Question {index + 1} of {numberOfQuestions}</h2>
-                        {survey.data && index < numberOfQuestions ?
+                        <h2>Question {step + 1} of {numberOfQuestions}</h2>
+                        {survey.data && step < numberOfQuestions ?
                             <Question
-                                question={survey.data.questions[index]}
-                                index={index}
+                                question={survey.data.questions[step]}
+                                Useranswers = {Useranswers[step]}
+                                step={step}
                                 onAnswerSelected={(event) => this.handleAnswerSelected(event)}
                                 onSubmit={() => this.handleSubmit()}
+                                back ={()=>this.handleBack()}
                             />
 
                             : 'completed'}
