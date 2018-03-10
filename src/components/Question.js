@@ -6,9 +6,10 @@ const Question = ({
   step,
   onAnswerSelected,
   onSubmit,
-  back
+  back,
+  error
 }) => {
-  
+
   return (
    
     <div>
@@ -23,9 +24,10 @@ const Question = ({
         </li>
       )}
       </ol>
-      <button onClick={back}>Back</button>
+      
+      {step > 0 && <button onClick={back}>Back</button>}
       <button onClick={onSubmit}>Submit</button>
-
+      <p className='error'>{error}</p>
     </div>
   )
 }

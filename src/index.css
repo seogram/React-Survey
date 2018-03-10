@@ -17,3 +17,12 @@ button, input {
 ol li{
   list-style-type: none;
 }
+
+.summary {
+  float:left;
+  padding: 0 5px;
+}
+
+.error {
+  color: red;
+}
