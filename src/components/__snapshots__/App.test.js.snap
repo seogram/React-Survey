@@ -12,12 +12,14 @@ ShallowWrapper {
     <h2>
         Survey 2018
     </h2>
+    <Survey />
 </div>,
   "nodes": Array [
     <div>
       <h2>
             Survey 2018
       </h2>
+      <Survey />
 </div>,
   ],
   "options": Object {},
@@ -58,12 +60,14 @@ ShallowWrapper {
           <h2>
                     Survey 2018
           </h2>
+          <Survey />
 </div>,
         "_debugID": 2,
         "_renderedOutput": <div>
           <h2>
                     Survey 2018
           </h2>
+          <Survey />
 </div>,
       },
       "_renderedNodeType": 0,
