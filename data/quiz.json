@@ -1,0 +1,68 @@
+{
+  "title": "Public Survey 2018",
+  "questions": [
+    {
+      "question": "Choose your Favorite Country",
+      "answers": [
+        {
+          "point": 1,
+          "label": "Germany"
+        },
+        {
+          "point": 0,
+          "label": "UK"
+        },
+        {
+          "point": 0,
+          "label": "US"
+        },
+        {
+          "point": 0,
+          "label": "France"
+        }
+      ]
+    },
+    {
+      "question": "Choose Your Favorite Color",
+      "answers": [
+        {
+          "point": 0,
+          "label": "White"
+        },
+        {
+          "point": 1,
+          "label": "Gray"
+        },
+        {
+          "point": 0,
+          "label": "Blue"
+        },
+        {
+          "point": 0,
+          "label": "Pink"
+        }
+      ]
+    },
+    {
+      "question": "Choose Your Favorite Food",
+      "answers": [
+        {
+          "point": 0,
+          "label": "Meat"
+        },
+        {
+          "point": 1,
+          "label": "Rice"
+        },
+        {
+          "point": 0,
+          "label": "Fish"
+        },
+        {
+          "point": 0,
+          "label": "Veggy"
+        }
+      ]
+    }
+  ]
+}
