@@ -1,4 +1,4 @@
-This repository shows how to develope a react application with TDD aproach from the ground.
+This repository includes a simple React Survey app .
 
 Execute tests : npm run test
 <br/>
