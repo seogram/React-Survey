@@ -9,16 +9,10 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <div>
-    <h2>
-        Survey 2018
-    </h2>
     <Survey />
 </div>,
   "nodes": Array [
     <div>
-      <h2>
-            Survey 2018
-      </h2>
       <Survey />
 </div>,
   ],
@@ -57,16 +51,10 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div>
-          <h2>
-                    Survey 2018
-          </h2>
           <Survey />
 </div>,
         "_debugID": 2,
         "_renderedOutput": <div>
-          <h2>
-                    Survey 2018
-          </h2>
           <Survey />
 </div>,
       },

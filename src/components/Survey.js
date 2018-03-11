@@ -9,7 +9,7 @@ export default class Survey extends React.Component {
         this.state = {
             survey: {},
             step: 0,
-            Useranswers: []
+            Useranswers: [],
         }
     }
 
@@ -23,7 +23,8 @@ export default class Survey extends React.Component {
         if (this.state.Useranswers[this.state.step] != null) {
             this.setState({ error: '' });
             this.state.step < this.state.survey.data.questions.length ?
-                this.setState({ 'step': this.state.step + 1 }) : ''
+                this.setState({ 'step': this.state.step + 1 }) : '';
+                
         } else {
             this.setState({ error: 'Please select one' })
         }
@@ -52,7 +53,6 @@ export default class Survey extends React.Component {
                         {`${this.state.survey.data.questions[i].question} :
                      ${this.state.survey.data.questions[i].answers[answer].label} `}
                     </div>
-
                     <br />
                 </div>
 
@@ -64,17 +64,10 @@ export default class Survey extends React.Component {
 
         const { survey, step, Useranswers, error } = this.state;
         const numberOfQuestions = survey.data ? survey.data.questions.length : 0;
-
         let completed = (survey.data && (step === survey.data.questions.length)) ? true : false;
-
-        localStorage.question = survey.data ? survey.data.questions[step] : '';
-        localStorage.Useranswers = Useranswers[step];
-        localStorage.step = step;
-
 
         return (
             <div className="container">
-                {console.log('local', localStorage.step)}
 
                 <h2>{survey.title}</h2>
                 {completed ?

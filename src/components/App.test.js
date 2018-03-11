@@ -9,5 +9,9 @@ describe('App', () => {
     expect(app).toMatchSnapshot();
   });
 
+  it('it has Survey component', () => {
+    expect(app.find('Survey').exists()).toBe(true);
+  });
+
 });
 

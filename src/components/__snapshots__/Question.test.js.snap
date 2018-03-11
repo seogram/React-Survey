@@ -1,0 +1,594 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Question Component renders properly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <h2
+        className="question"
+    >
+        Choose your Favorite Country
+    </h2>
+    <ol>
+        <li
+            className="answerOption"
+        >
+            <input
+                className="radioCustomButton"
+                defaultChecked={false}
+                id="question_1_answer_0"
+                name="question_1"
+                onChange={[Function]}
+                type="radio"
+                value={0}
+            />
+             
+            <label
+                className="radioCustomLabel"
+                htmlFor="question_1_answer_0"
+            >
+                Germany
+            </label>
+        </li>
+        <li
+            className="answerOption"
+        >
+            <input
+                className="radioCustomButton"
+                defaultChecked={true}
+                id="question_1_answer_1"
+                name="question_1"
+                onChange={[Function]}
+                type="radio"
+                value={1}
+            />
+             
+            <label
+                className="radioCustomLabel"
+                htmlFor="question_1_answer_1"
+            >
+                UK
+            </label>
+        </li>
+        <li
+            className="answerOption"
+        >
+            <input
+                className="radioCustomButton"
+                defaultChecked={false}
+                id="question_1_answer_2"
+                name="question_1"
+                onChange={[Function]}
+                type="radio"
+                value={2}
+            />
+             
+            <label
+                className="radioCustomLabel"
+                htmlFor="question_1_answer_2"
+            >
+                US
+            </label>
+        </li>
+        <li
+            className="answerOption"
+        >
+            <input
+                className="radioCustomButton"
+                defaultChecked={false}
+                id="question_1_answer_3"
+                name="question_1"
+                onChange={[Function]}
+                type="radio"
+                value={3}
+            />
+             
+            <label
+                className="radioCustomLabel"
+                htmlFor="question_1_answer_3"
+            >
+                France
+            </label>
+        </li>
+    </ol>
+    <div
+        style={
+            Object {
+                "textAlign": "center",
+              }
+        }
+    >
+        <button
+            className="back"
+            onClick={[Function]}
+        >
+            Back
+        </button>
+        <button
+            className="submit"
+            onClick={[Function]}
+        >
+            Submit
+        </button>
+        <p
+            className="error"
+        />
+    </div>
+</div>,
+  "nodes": Array [
+    <div>
+      <h2
+            className="question"
+      >
+            Choose your Favorite Country
+      </h2>
+      <ol>
+            <li
+                  className="answerOption"
+            >
+                  <input
+                        className="radioCustomButton"
+                        defaultChecked={false}
+                        id="question_1_answer_0"
+                        name="question_1"
+                        onChange={[Function]}
+                        type="radio"
+                        value={0}
+                  />
+                   
+                  <label
+                        className="radioCustomLabel"
+                        htmlFor="question_1_answer_0"
+                  >
+                        Germany
+                  </label>
+            </li>
+            <li
+                  className="answerOption"
+            >
+                  <input
+                        className="radioCustomButton"
+                        defaultChecked={true}
+                        id="question_1_answer_1"
+                        name="question_1"
+                        onChange={[Function]}
+                        type="radio"
+                        value={1}
+                  />
+                   
+                  <label
+                        className="radioCustomLabel"
+                        htmlFor="question_1_answer_1"
+                  >
+                        UK
+                  </label>
+            </li>
+            <li
+                  className="answerOption"
+            >
+                  <input
+                        className="radioCustomButton"
+                        defaultChecked={false}
+                        id="question_1_answer_2"
+                        name="question_1"
+                        onChange={[Function]}
+                        type="radio"
+                        value={2}
+                  />
+                   
+                  <label
+                        className="radioCustomLabel"
+                        htmlFor="question_1_answer_2"
+                  >
+                        US
+                  </label>
+            </li>
+            <li
+                  className="answerOption"
+            >
+                  <input
+                        className="radioCustomButton"
+                        defaultChecked={false}
+                        id="question_1_answer_3"
+                        name="question_1"
+                        onChange={[Function]}
+                        type="radio"
+                        value={3}
+                  />
+                   
+                  <label
+                        className="radioCustomLabel"
+                        htmlFor="question_1_answer_3"
+                  >
+                        France
+                  </label>
+            </li>
+      </ol>
+      <div
+            style={
+                  Object {
+                        "textAlign": "center",
+                      }
+            }
+      >
+            <button
+                  className="back"
+                  onClick={[Function]}
+            >
+                  Back
+            </button>
+            <button
+                  className="submit"
+                  onClick={[Function]}
+            >
+                  Submit
+            </button>
+            <p
+                  className="error"
+            />
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Unknown
+        Useranswers={1}
+        back={[Function]}
+        onAnswerSelected={[Function]}
+        onSubmit={[Function]}
+        question={
+                Object {
+                        "answers": Array [
+                          Object {
+                            "label": "Germany",
+                            "point": 1,
+                          },
+                          Object {
+                            "label": "UK",
+                            "point": 0,
+                          },
+                          Object {
+                            "label": "US",
+                            "point": 0,
+                          },
+                          Object {
+                            "label": "France",
+                            "point": 0,
+                          },
+                        ],
+                        "question": "Choose your Favorite Country",
+                      }
+        }
+        step={1}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "Useranswers": 1,
+          "back": [Function],
+          "onAnswerSelected": [Function],
+          "onSubmit": [Function],
+          "question": Object {
+            "answers": Array [
+              Object {
+                "label": "Germany",
+                "point": 1,
+              },
+              Object {
+                "label": "UK",
+                "point": 0,
+              },
+              Object {
+                "label": "US",
+                "point": 0,
+              },
+              Object {
+                "label": "France",
+                "point": 0,
+              },
+            ],
+            "question": "Choose your Favorite Country",
+          },
+          "step": 1,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <h2
+                    className="question"
+          >
+                    Choose your Favorite Country
+          </h2>
+          <ol>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_0"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={0}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_0"
+                              >
+                                        Germany
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={true}
+                                        id="question_1_answer_1"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={1}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_1"
+                              >
+                                        UK
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_2"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={2}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_2"
+                              >
+                                        US
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_3"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={3}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_3"
+                              >
+                                        France
+                              </label>
+                    </li>
+          </ol>
+          <div
+                    style={
+                              Object {
+                                        "textAlign": "center",
+                                      }
+                    }
+          >
+                    <button
+                              className="back"
+                              onClick={[Function]}
+                    >
+                              Back
+                    </button>
+                    <button
+                              className="submit"
+                              onClick={[Function]}
+                    >
+                              Submit
+                    </button>
+                    <p
+                              className="error"
+                    />
+          </div>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <h2
+                    className="question"
+          >
+                    Choose your Favorite Country
+          </h2>
+          <ol>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_0"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={0}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_0"
+                              >
+                                        Germany
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={true}
+                                        id="question_1_answer_1"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={1}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_1"
+                              >
+                                        UK
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_2"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={2}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_2"
+                              >
+                                        US
+                              </label>
+                    </li>
+                    <li
+                              className="answerOption"
+                    >
+                              <input
+                                        className="radioCustomButton"
+                                        defaultChecked={false}
+                                        id="question_1_answer_3"
+                                        name="question_1"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value={3}
+                              />
+                               
+                              <label
+                                        className="radioCustomLabel"
+                                        htmlFor="question_1_answer_3"
+                              >
+                                        France
+                              </label>
+                    </li>
+          </ol>
+          <div
+                    style={
+                              Object {
+                                        "textAlign": "center",
+                                      }
+                    }
+          >
+                    <button
+                              className="back"
+                              onClick={[Function]}
+                    >
+                              Back
+                    </button>
+                    <button
+                              className="submit"
+                              onClick={[Function]}
+                    >
+                              Submit
+                    </button>
+                    <p
+                              className="error"
+                    />
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Unknown
+    Useranswers={1}
+    back={[Function]}
+    onAnswerSelected={[Function]}
+    onSubmit={[Function]}
+    question={
+        Object {
+            "answers": Array [
+              Object {
+                "label": "Germany",
+                "point": 1,
+              },
+              Object {
+                "label": "UK",
+                "point": 0,
+              },
+              Object {
+                "label": "US",
+                "point": 0,
+              },
+              Object {
+                "label": "France",
+                "point": 0,
+              },
+            ],
+            "question": "Choose your Favorite Country",
+          }
+    }
+    step={1}
+/>,
+}
+`;
